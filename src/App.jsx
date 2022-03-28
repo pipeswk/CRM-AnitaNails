@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './Layout/Layout'
 import Inicio from './Pages/Inicio'
@@ -7,7 +7,7 @@ import EditarCliente from './Pages/EditarCliente'
 
 
 function App() {
-
+  
   return (
       <BrowserRouter>
         <Routes>
