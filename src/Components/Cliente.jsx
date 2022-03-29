@@ -1,10 +1,11 @@
 import { useNavigate } from 'react-router-dom'
 
-const Cliente = ( { cliente } ) => {
+const Cliente = ( { cliente, handleDelete } ) => {
 
     const { nombres, apellidos, email, telefono, nacimiento, id } = cliente;
 
     const navigate = useNavigate();
+
 
   return (
     <tr className='cursor-pointer hover:bg-slate-200'>
@@ -17,14 +18,16 @@ const Cliente = ( { cliente } ) => {
         <td className='p-3'>
             <button
                 type='button'
-                className='bg-green-600 text-center p-0 text-white font-semibold mx-2 my-1 rounded-md block w-full'
-                // onClick={}
+                className='bg-green-600 text-center p-0 text-white font-semibold mx-2 my-1 rounded-md block w-full hover:bg-green-700'
+                onClick={() => navigate(`/clientes/editar-cliente/${id}`)}
             >
                 Editar
             </button>
             <button
                 type='button'
-                className='bg-red-600 text-center p-0 text-white font-semibold ml-2 my-1 rounded-md block w-full'>
+                className='bg-red-600 text-center p-0 text-white font-semibold ml-2 my-1 rounded-md block w-full hover:bg-red-700'
+                onClick={() => handleDelete(id)}
+            >
                 Eliminar
             </button>
         </td>
