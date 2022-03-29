@@ -47,6 +47,14 @@
       "telefono": "3132547896",
       "nacimiento": "1996-11-21",
       "id": 6
+    },
+    {
+      "nombres": "Teylor Steven",
+      "apellidos": "Velasquez Cardozo",
+      "email": "tevelasquez@poligran.edu.co",
+      "telefono": "3004995763",
+      "nacimiento": "1997-08-15",
+      "id": 7
     }
   ]
 }
